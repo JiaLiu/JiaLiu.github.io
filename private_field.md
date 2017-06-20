@@ -1,4 +1,6 @@
 # JavaScript 的新特性 —— 类的私有属性
+>本文译自 [JavaScript's new #private class fields](http://thejameskyle.com/javascripts-new-private-class-fields.html)，原文基于 [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) 授权。 
+
 *这是什么，如何使用以及它为什么会被设计成这样子*
 ***
 [类的私有属性](https://github.com/tc39/proposal-class-fields#private-fields)这一新特性目前正处于 JavaScript 标准流程的 [Stage 2](https://tc39.github.io/process-document/) 阶段。尽管尚未最终确定，但 JavaScript 标准委员会期望它最后能被纳入到标准之中（期间仍然可能会有一些变化）。
@@ -219,5 +221,3 @@ if (
 总之，我们需要使用符号#来标识私有属性，而使用其它方式会造成不可预期的行为和结果，并带来巨大的性能问题。  
 ***
 私有属性对语言来说是一个非常好的补充。感谢 TC39 委员会中所有曾经及现在为之付出卓越努力的人们！
-***
-本文的英文原文基于 [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) 授权。 
