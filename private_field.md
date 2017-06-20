@@ -1,7 +1,7 @@
 # JavaScript 的新特性 —— 类的私有属性
-*这是什么，如何使用以及它为什么被设计成这样子*
+*这是什么，如何使用以及它为什么会被设计成这样子*
 ***
-[类的私有属性](https://github.com/tc39/proposal-class-fields#private-fields)这一新特性目前正处于 JavaScript 标准流程的 [Stage 2](https://tc39.github.io/process-document/) 阶段。尽管尚未最终确定，但 JavaScript 标准委员会期望它最后能被纳入到标准之中（期间仍然可能会有一些变化）。
+[类的私有属性](https://github.com/tc39/proposal-class-fields#private-fields)这一新特性目前正处于 JavaScript 标准流程的 [Stage 2](https://tc39.github.io/process-document/) 阶段。尽管尚未最终确定，但 JavaScript 标准委员会期望它最后能被纳入到标准之中（期间仍然可能会有一些变化）。
 
 其语法（现阶段）就像这样
 ```javascript
@@ -20,11 +20,11 @@ class Point {
 }
 ```
 其中主要涉及两个方面：
-1. 如何定义私有属性
+1. 如何定义私有属性
 2. 如何引用私有属性
 
 ## 定义私有属性
-私有属性的定义方式几乎与公有属性完全一致：
+私有属性的定义方式几乎与公有属性完全一致：
 ```javascript
 class Foo {
   publicFieldName = 1;
@@ -57,11 +57,11 @@ method() {
 这段代码与下面代码的含义是一样的：
 ```javascript
 method() {
-  this.#privateFieldName;
+  this.#privateFieldName;
 }
 ```
 ## 引用类实例的私有属性
-不仅可以利用 `this` 来引用自己的私用属性，你也可以在类中访问同类其它实例的私有属性：
+不仅可以利用 `this` 来引用自己的私用属性，你也可以在类中访问同类其它实例的私有属性：
 ```javascript
 class Foo {
   #privateValue = 42;
@@ -72,7 +72,7 @@ class Foo {
 
 Foo.getPrivateValue(new Foo()); // >> 42
 ```
-在这段代码中，`foo` 是 `Foo` 类的一个实例，因此我们可以在 `Foo` 的类定义中访问 `foo` 的私有属性 `#prvateValue`。
+在这段代码中，`foo` 是 `Foo` 类的一个实例，因此我们可以在 `Foo` 的类定义中访问 `foo` 的私有属性 `#prvateValue`。
 ## 私有方法（即将到来？）
 有关私有属性的[提案](https://github.com/tc39/proposal-class-fields)仅仅涉及了为类增加一种新的属性，却并未对类方法做出任何改变。类的私有方法将会出现在[随后的另一份提案](https://github.com/tc39/proposal-private-fields/blob/master/METHODS.md)中，它可能会是这样：
 ```javascript
@@ -120,7 +120,7 @@ class Foo {
 ```javascript
 foo.bar = 1; // Error: `bar` is private! （侦测成功！）
 ```
-或者换一个“安静”些的版本：
+或者换一个“安静”些的版本：
 ```javascript
 foo.bar = 1;
 foo.bar; // `undefined` (侦测成功！)
@@ -164,13 +164,13 @@ class EnterpriseFoo {
 在这些语言中，公有属性和私有属性的访问方式是一致的，因而它们采用这种定义方式也是合理的。
 
 可是在 JavaScript 中，由于我们不能使用 `this.field` 的方式访问一个私有属性（我会在后文讨论这个原因），因此我们需要一种句法上的形式来统一私有属性的声明与访问。通过在这两个地方都使用符号#，到底在引用哪个属性就会清晰地多。
-### 为什么引用属性时需要符号#？
+### 为什么引用属性时需要符号#？
 我们需要用 `this.#field` 而不是 `this.field` 有如下这些原因：
-1. 正如在上文“封装”一节中所讨论的，我们需要允许公有属性和私有属性同名，因此不能采用过去的传统方式去访问一个私有属性。
+1. 正如在上文“封装”一节中所讨论的，我们需要允许公有属性和私有属性同名，因此不能采用过去的传统方式去访问一个私有属性。
 2. 在 JavaScript 中可以采用 `this.field` 或者 `this['field']` 的方式引用公有属性。而由于私有属性是静态的（不能动态添加），它不能支持第二种引用方式。这可能会导致语法上的混乱。
 3. 会承担额外的检查“代价”。
 
-关于第三点，让我们来看一个例子：
+关于第三点，让我们来看一个例子：
 ```javascript
 class Point {
   #x;
@@ -185,7 +185,7 @@ class Point {
   }
 }
 ```
-请注意这里我们是如何引用 `other` 的私有属性 `#x` 和 `#y` 的。这种方式意味着我们假设 `other` 必然是 `Point` 类的一个实例。
+请注意这里我们是如何引用 `other` 的私有属性 `#x` 和 `#y` 的。这种方式意味着我们假设 `other` 必然是 `Point` 类的一个实例。
 
 因为我们使用了符号#这种语法，相当于我们已经告诉 JavaScript 编译器我们正在查询的是当前类的私有属性。
 
@@ -197,10 +197,10 @@ equals(otherPoint) {
 ```
 现在我们就有了一个问题：我们怎样才能知道 `otherPoint` 是什么？
 
-JavaScript 没有静态类型系统，因此 `otherPoint` 可能是任何东西。
+JavaScript 没有静态类型系统，因此 `otherPoint` 可能是任何东西。
 
 之所以这是一个问题有两个原因：
-1. 依赖于你传入值的类型，我们的函数将会产生不同的行为：有时在访问一个私有属性，有时又会去访问一个公有属性。
+1. 依赖于你传入值的类型，我们的函数将会产生不同的行为：有时在访问一个私有属性，有时又会去访问一个公有属性。
 2. 我们将不得不每次都去检查 `otherPoint` 的类型：
 ```javascript
 if (
@@ -218,6 +218,6 @@ if (
 
 总之，我们需要使用符号#来标识私有属性，而使用其它方式会造成不可预期的行为和结果，并带来巨大的性能问题。  
 ***
-私有属性对语言来说是一个非常好的补充。感谢 TC39 委员会中所有曾经及现在为之付出卓越努力的人们！
+私有属性对语言来说是一个非常好的补充。感谢 TC39 委员会中所有曾经及现在为之付出卓越努力的人们！
 ***
 本文的英文原文基于 [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) 授权。 
