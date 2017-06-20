@@ -1,6 +1,7 @@
 # JavaScript 的新特性 —— 类的私有属性
 *这是什么，如何使用以及它为什么会被设计成这样*
->本文译自 [JavaScript's new #private class fields](http://thejameskyle.com/javascripts-new-private-class-fields.html)，原文基于 [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) 授权。 
+>本文译自 [JavaScript's new #private class fields](http://thejameskyle.com/javascripts-new-private-class-fields.html)，原文基于 [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) 授权。
+
 [类的私有属性](https://github.com/tc39/proposal-class-fields#private-fields)这一新特性目前正处于 JavaScript 标准流程的 [Stage 2](https://tc39.github.io/process-document/) 阶段。尽管尚未最终确定，但 JavaScript 标准委员会期望它最后能被纳入到标准之中（期间仍然可能会有一些变化）。
 
 其语法（现阶段）就像这样
