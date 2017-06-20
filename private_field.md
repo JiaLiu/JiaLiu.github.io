@@ -1,4 +1,5 @@
-  
+   
+      
 # JavaScript 的新特性 —— 类的私有属性
 *这是什么，如何使用以及它为什么会被设计成这样*
 >本文译自 [JavaScript's new #private class fields](http://thejameskyle.com/javascripts-new-private-class-fields.html)，原文基于 [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) 授权。
