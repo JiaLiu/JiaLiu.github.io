@@ -72,7 +72,7 @@ class Foo {
 
 Foo.getPrivateValue(new Foo()); // >> 42
 ```
-在这段代码中，`foo` 是 `Foo` 类的一个实例，因此我们可以在 `Foo` 的类定义中访问 `foo` 的私有属性 `#prvateValue`。
+在这段代码中，`foo` 是 `Foo` 类的一个实例，因此我们可以在 `Foo` 的类定义中访问 `foo` 的私有属性 `#prvateValue`。
 ## 私有方法（即将到来？）
 有关私有属性的[提案](https://github.com/tc39/proposal-class-fields)仅仅涉及了为类增加一种新的属性，却并未对类方法做出任何改变。类的私有方法将会出现在[随后的另一份提案](https://github.com/tc39/proposal-private-fields/blob/master/METHODS.md)中，它可能会是这样：
 ```javascript
