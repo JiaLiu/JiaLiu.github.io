@@ -1,8 +1,8 @@
 # JavaScript 的新特性 —— 类的私有属性
 >本文译自 [JavaScript's new #private class fields](http://thejameskyle.com/javascripts-new-private-class-fields.html)，原文基于 [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) 授权。 
 
-*这是什么，如何使用以及它为什么会被设计成这样子*
-***
+*这是什么，如何使用以及它为什么会被设计成这样*
+
 [类的私有属性](https://github.com/tc39/proposal-class-fields#private-fields)这一新特性目前正处于 JavaScript 标准流程的 [Stage 2](https://tc39.github.io/process-document/) 阶段。尽管尚未最终确定，但 JavaScript 标准委员会期望它最后能被纳入到标准之中（期间仍然可能会有一些变化）。
 
 其语法（现阶段）就像这样
@@ -111,7 +111,7 @@ class Foo {
 let foo = new Foo();
 foo.#bar; // 无效!
 ```
-并且，作为一个真正的私有属性，你甚至也无法侦测到它的存在。为了保证这一点，我们需要允许公有属性和私有属性可以具有相同的名字。
+并且，作为一个真正的私有属性，你甚至也无法侦测到它的存在。为了保证这一点，我们需要允许公有属性和私有属性可以具有相同的名字。
 ```javascript
 class Foo {
   bar = 1; // 公有属性 bar
