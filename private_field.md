@@ -74,7 +74,7 @@ Foo.getPrivateValue(new Foo()); // >> 42
 ```
 在这段代码中，`foo` 是 `Foo` 类的一个实例，因此我们可以在 `Foo` 的类定义中访问 `foo` 的私有属性 `#prvateValue`。
 ## 私有方法（即将到来？）
-有关私有属性的[提案](https://github.com/tc39/proposal-class-fields)仅仅涉及了为类增加一种新的属性，却并未对类方法做出任何改变。类的私有方法将会出现在[随后的另一份提案](https://github.com/tc39/proposal-private-fields/blob/master/METHODS.md)中，它可能会是这样：
+有关私有属性的[提案](https://github.com/tc39/proposal-class-fields)仅仅涉及了为类增加一种新的属性，却并未对类方法做出任何改变。类的私有方法将会出现在[随后的另一份提案](https://github.com/tc39/proposal-private-fields/blob/master/METHODS.md)中，它可能会是这样：
 ```javascript
 class Foo {
   constructor() {
@@ -98,7 +98,7 @@ class Foo {
 }
 ```
 ## 封装
-你不能通过一个类的实例访问它内部的私有属性，除非你是在定义这些私有属性的类内部访问它们。
+你不能通过一个类的实例访问它内部的私有属性，除非你是在定义这些私有属性的类内部访问它们。
 ```javascript
 class Foo {
   #bar;
@@ -118,7 +118,7 @@ class Foo {
 ```
 如果不允许私有属性与公有属性同名，那你就可以通过对属性赋值的方式来侦测私有属性是否存在：
 ```javascript
-foo.bar = 1; // Error: `bar` is private! （侦测成功！）
+foo.bar = 1; // Error: `bar` is private! （侦测成功！）
 ```
 或者换一个“安静”些的版本：
 ```javascript
@@ -137,7 +137,7 @@ class Bar extends Foo {
 ```
 如果想了解更多这种封装性设计背后的动机，可以参考[这部分内容](https://github.com/tc39/proposal-private-fields/blob/master/FAQ.md#why-is-encapsulation-a-goal-of-this-proposal)。
 ## 为什么需要符号# 
-许多人都会想知道，为什么不参照许多其它语言的惯例，使用 `private` 关键字来标识私有属性？例如：
+许多人都会想知道，为什么不参照许多其它语言的惯例，使用 `private` 关键字来标识私有属性？例如：
 ```
 class Foo {
   private value;
@@ -149,7 +149,7 @@ class Foo {
 ```
 让我们还是从两个方面来看一下这个问题。
 ### 为什么不使用 `private` 关键字来声明私有属性
-在很多不同的程序语言里，都使用 `private` 关键字声明私有属性。
+在很多不同的程序语言里，都使用 `private` 关键字声明私有属性。
 让我们来看一下这种语法：
 ```
 class EnterpriseFoo {
