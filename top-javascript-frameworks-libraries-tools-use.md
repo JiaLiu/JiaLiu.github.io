@@ -451,14 +451,14 @@ Jasmine 是一个行为驱动测试套件，它可以在浏览器中自动化测
 
 |QUnit||
 |----|----|
-|网站|[https://qunitjs.com/](https://qunitjs.com/)|
+|网站|[qunitjs.com/](https://qunitjs.com/)|
 |代码库|[github.com/kof/node-qunit](https://github.com/kof/node-qunit)|
 |当前版本|1.0.0|
 |月下载量|2.5万|
 
 顾名思义，QUnit 是一个单元测试框架，它可以测试当传入的特定参数时你的函数的返回结果。它还可以报告测试覆盖率以确保你不会遗漏一些代码流程分支。
 ## 工具：杂项
-尽管我在这里尽了自己最大的努力，但我也承认并非每个人都喜欢 JavaScript！像 [TypeScript](https://www.typescriptlang.org/)、[LiveScript](http://livescript.net/)和 [CoffeeScript](http://coffeescript.org/) 这样的编译到 JavaScript 的语言可以让你的开发生活更为愉悦。而作为替代方案，也可以考虑使用 [Babel](https://babeljs.io/) 来把现代的、简洁的 [ES2015](https://www.sitepoint.com/premium/courses/diving-into-es2015-2924) 代码转换成跨浏览器兼容的 ES5 代码。
+尽管我在这里尽了自己最大的努力，但我也承认并非每个人都喜欢 JavaScript！像 [TypeScript](https://www.typescriptlang.org/)、[LiveScript](http://livescript.net/) 和 [CoffeeScript](http://coffeescript.org/) 这样的编译到 JavaScript 的语言可以让你的开发生活更为愉悦。而作为替代方案，也可以考虑使用 [Babel](https://babeljs.io/) 来把现代的、简洁的 [ES2015](https://www.sitepoint.com/premium/courses/diving-into-es2015-2924) 代码转换成跨浏览器兼容的 ES5 代码。
 
 [基于 JavaScript 的 HTML 模板引擎](https://www.sitepoint.com/overview-javascript-templating-engines/?aref=cbuckler)也有很多，例如 [Mustache](https://mustache.github.io/)、[Handlebars](http://handlebarsjs.com/)、[Pug (Jade)](https://pugjs.org/api/getting-started.html) 和 [EJS](http://embeddedjs.com/)。我比较喜欢保留了 JavaScript 语法的轻量级的模板引擎，比如 [EJS](http://ejs.co/) 和 [doT](https://olado.github.io/doT/)。
 
@@ -478,4 +478,4 @@ Jasmine 是一个行为驱动测试套件，它可以在浏览器中自动化测
 
 最后，请记住这些库、框架和工具都是可选的，而并非必须的。在过去10年里 JavaScript 开发已经发生了翻天覆地的变化，我们已经从当初只有几个不成熟的库发展到现在这个选择过剩的时代。我们会很容易落入复杂性不断增长的陷阱，或者没几个月就换用一个更新更火的框架。当你在做一些小的或者个人项目时，请考虑使用原生的 JavaScript。只有这方面的知识积累才是永远不会过时的，并且会在你为别的项目选择框架时产生非常宝贵的价值。
 
-我遗漏了你喜欢的 JavaScript 库、框架或者工具了吗？我想这是肯定的！那么就请在下面给出你的评论吧。
+我遗漏了你喜欢的 JavaScript 库、框架或者工具了吗？我想这是肯定的！那么就请在[这里](https://www.sitepoint.com/top-javascript-frameworks-libraries-tools-use/#comments)给出你的评论吧。
