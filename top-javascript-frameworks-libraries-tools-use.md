@@ -50,6 +50,7 @@
 下列项目按照流行程度排序……
 ### jQuery
 
+
 |jQuery||
 |----|----|
 |类型|库|
@@ -61,6 +62,7 @@
 |体积|压缩后 30kb|
 |用于|通用于各种项目|
 |使用率|[72.4%的网站](https://w3techs.com/technologies/details/js-jquery/all/all)|
+
 
 jQuery一直是有史以来使用最多的 JavaScript 库，它还被包含在 WordPress、ASP.NET 和几个其它框架中一同分发。jQuery 引入了 CSS 选择器进行 DOM 节点的获取，并可以通过链式调用挂载事件处理器、执行动画以及 Ajax 操作，这些都对客户端开发产生了革命性的影响。
 
