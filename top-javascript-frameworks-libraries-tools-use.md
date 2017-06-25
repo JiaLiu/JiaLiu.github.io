@@ -31,7 +31,7 @@
 * 库的补丁可能会改变原有的 API 进而导致你的代码也必须做出重大的改动
 
 ### 框架
-**框架**是一个应用程序的骨架。它要求你遵循一定的方式进行软件设计，并在特定的位置插入你自己的逻辑。框架一般都会提供诸如事件、存储和数据绑定这样的功能。仍然用汽车来做一个类比，框架相当于提供了可以工作的底盘、车身和引擎。而你在不破坏汽车功能的前提下可以添加、去除或者修改一些组成部件。
+**框架**是一个应用程序的骨架。它要求你遵循一定的方式进行软件设计，并在特定的位置插入你自己的逻辑。框架一般都会提供诸如事件、存储和数据绑定这样的功能。仍然用汽车来做一个类比，框架相当于提供了可以工作的底盘、车身和引擎。而你在不破坏汽车功能的前提下可以添加、去除或者修改一些组成部件。
 
 框架一般会提供比库更高阶的抽象，帮助你快速搭建项目起初80%的部分。它的缺点则是：
 * 如果你的应用需求超出了框架能提供的范畴，那剩余20%的工作将会是个很大的挑战
@@ -45,7 +45,7 @@
 ### 不要给我打标签！
 库、框架和工具之间的区别其实并不那么清晰。一个框架中可能也包含一个库，而一个库也可以实现像框架一样的方法。而构建一个库或者框架则都离不开工具的帮助。在后文中我试图标明每个项目到底是库、框架还是工具，但分类时口径可能并不那么一致。
   
-如果这些听起来都太复杂了，你也可以考虑使用**原生 Javascript**。这没什么不好的，但最终你肯定会创造出自己的库或者框架级别的代码，它们也同样像别的框架和库一样需要你长期维护。而其实 JavaScript 自身也是建立于浏览器和操作系统抽象之上的一个高阶抽象。
+如果这些听起来都太复杂了，你也可以考虑使用**原生 Javascript**。这没什么不好的，但最终你肯定会创造出自己的库或者框架级别的代码，它们也同样像别的框架和库一样需要你长期维护。而其实 JavaScript 自身也是建立于浏览器和操作系统抽象之上的一个高阶抽象。
 ## JavaScript 框架和库
 下列项目按照流行程度排序……
 ### jQuery
@@ -189,7 +189,7 @@ Angular 1.x仍然在持续开发中，但它也同时发布了 Angular 2（现�
 
 Angular 2.0 发布于2016年9月。它名为2.0，其实是一个完全重写的版本。项目引入一个模块化的基于组件的模型，并用 TypeScript（再编译为 JavaScript）写成。2017年3月4.0版本发布（由于一些语义化版本上的问题，3.0版本被直接跳过了），这更增加了在版本上的混乱。
 
-Angurlar 2 及其后续版本与其1.x版本是完全不同的两个项目，它们也互不兼容 —— 如果当时 Google 能给 Angular 2 另取一个不同的名字可能就不会这么令人费解了吧！
+Angurlar 2 及其后续版本与其1.x版本是完全不同的两个项目，它们也互不兼容 —— 如果当时 Google 能给 Angular 2 另取一个不同的名字可能就不会这么令人费解了吧！
 
 优点：
 * 它也是一个用于构建现代 web 应用程序的单一而完整的解决方案
@@ -311,14 +311,14 @@ Knockout.js 是较老的 MVVM 框架之一。它使用观察者模式来保证�
 
 ### 其它值得关注的项目
 还想了解更多的项目吗？下面这些项目的流行程度可能不如上面提到的那些，但也是值得关注的：
-* [Polymer](https://www.polymer-project.org/) —— 一个使浏览器支持 HTML5 web 组件的库，并且可以跨浏览器工作
-* [Meteor](https://www.meteor.com/) —— 一个用于开发 web 应用程序的全栈式平台
-* [Aurelia](http://aurelia.io/) —— 一个非常新的、轻量级的、跨平台的框架
-* [Svelte](https://svelte.technology/) —— 一个非常新的项目，可以将框架代码转换成清晰的 JavaScript 代码
-* [Conditioner.js](http://conditionerjs.com/) —— 一个新的库，能够根据状态自动加载和卸载模块
+* [Polymer](https://www.polymer-project.org/) ：一个使浏览器支持 HTML5 web 组件的库，并且可以跨浏览器工作
+* [Meteor](https://www.meteor.com/) ：一个用于开发 web 应用程序的全栈式平台
+* [Aurelia](http://aurelia.io/) ：一个非常新的、轻量级的、跨平台的框架
+* [Svelte](https://svelte.technology/) ：一个非常新的项目，可以将框架代码转换成清晰的 JavaScript 代码
+* [Conditioner.js](http://conditionerjs.com/) ：一个新的库，能够根据状态自动加载和卸载模块
 
 ## 工具：任务执行
-构建工具可以自动运行 web 开发过程中各种不同的任务，例如预处理、编译、图片优化、代码压缩、代码检查以及运行测试。这些任务可以统一由一个单独的可执行包来管理。最受人欢迎的选项包括：
+构建工具可以自动运行 web 开发过程中各种不同的任务，例如预处理、编译、图片优化、代码压缩、代码检查以及运行测试。这些任务可以统一由一个单独的可执行包来管理。最受人欢迎的选项包括：
 ### Gulp.js
 |Gulp.js||
 |:----:|:---:|
@@ -385,7 +385,7 @@ RequireJS 是一个运行在浏览器中的模块加载工具，它也可以在 
 |当前版本|3.19.0|
 |月下载量|600万|
 
-ESLint 是一个可插拔式的代码检查工具，每条规则都是一个插件，因此你可以把它配置成你喜欢的样子。
+ESLint 是一个可插拔式的代码检查工具，每条规则都是一个插件，因此你可以把它配置成你喜欢的样子。
 ### JSHint
 |JSHint||
 |:----:|:---:|
@@ -394,7 +394,7 @@ ESLint 是一个可插拔式的代码检查工具，每条规则都是一个插
 |当前版本|2.9.4|
 |月下载量|200万|
 
-JSHint 是一个灵活的JavaScript 代码检查工具，它在真正的代码错误和迂腐的句法要求之间做到了一个很好的平衡。它也是我个人的最爱。
+JSHint 是一个灵活的JavaScript 代码检查工具，它在真正的代码错误和迂腐的句法要求之间做到了一个很好的平衡。它也是我个人的最爱。
 ### JSLint
 |JSLint||
 |:----:|:---:|
@@ -438,7 +438,7 @@ Jasmine 是一个行为驱动测试套件，它可以在浏览器中自动化测
 ## 工具：杂项
 尽管我在这里尽了自己最大的努力，但我也承认并非每个人都喜欢 JavaScript！像 [TypeScript](https://www.typescriptlang.org/)、[LiveScript](http://livescript.net/)和 [CoffeeScript](http://coffeescript.org/) 这样的编译到 JavaScript 的语言可以让你的开发生活更为愉悦。而作为替代方案，也可以考虑使用 [Babel](https://babeljs.io/) 来把现代的、简洁的 [ES2015](https://www.sitepoint.com/premium/courses/diving-into-es2015-2924) 代码转换成跨浏览器兼容的 ES5 代码。
 
-[基于 JavaScript 的 HTML 模板引擎](https://www.sitepoint.com/overview-javascript-templating-engines/?aref=cbuckler)也有很多，例如 [Mustache](https://mustache.github.io/)、[Handlebars](http://handlebarsjs.com/)、[Pug (Jade)](https://pugjs.org/api/getting-started.html) 和 [EJS](http://embeddedjs.com/)。我比较喜欢保留了 JavaScript 语法的轻量级的模板引擎，比如 [EJS](http://ejs.co/) 和 [doT](https://olado.github.io/doT/)。
+[基于 JavaScript 的 HTML 模板引擎](https://www.sitepoint.com/overview-javascript-templating-engines/?aref=cbuckler)也有很多，例如 [Mustache](https://mustache.github.io/)、[Handlebars](http://handlebarsjs.com/)、[Pug (Jade)](https://pugjs.org/api/getting-started.html) 和 [EJS](http://embeddedjs.com/)。我比较喜欢保留了 JavaScript 语法的轻量级的模板引擎，比如 [EJS](http://ejs.co/) 和 [doT](https://olado.github.io/doT/)。
 
 最后，如果可以自动生成文档的话你为什么还要自己去手写呢？与 ES2015 兼容的文档生成工具主要有 [ESDoc](https://esdoc.org/)、[JSDoc](http://usejsdoc.org/)、[YUIdoc](http://yui.github.io/yuidoc/)、[documentation.js](http://documentation.js.org/) 和 [Transcription](https://github.com/affirmix/transcription)。
 ## 总结与推荐
