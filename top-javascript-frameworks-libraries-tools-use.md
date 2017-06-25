@@ -50,7 +50,7 @@
 下列项目按照流行程度排序……
 ### jQuery
 |jQuery||
-|:----:|:---:|
+|----|----|
 |类型|库|
 |网站|[jquery.com](http://jquery.com/)|
 |代码库|[github.com/jquery/jquery](https://github.com/jquery/jquery)|
@@ -79,7 +79,7 @@ jQuery一直是有史以来使用最多的 JavaScript 库，它还被包含在 W
 
 ### React
 |React||
-|:----:|:---:|
+|----|----|
 |类型|库|
 |网站|[facebook.github.io/react/](https://facebook.github.io/react/)|
 |代码库|[github.com/facebook/react](https://github.com/facebook/react)|
@@ -109,7 +109,7 @@ React 的使用率统计数据较低可能是因为它主要被用在应用程�
 
 ### Lodash 和 Underscore
 |Lodash||
-|:----:|:---:|
+|----|----|
 |类型|库|
 |网站|[lodash.com/](https://lodash.com/)|
 |代码库|[github.com/lodash/lodash/](https://github.com/lodash/lodash/)|
@@ -121,7 +121,7 @@ React 的使用率统计数据较低可能是因为它主要被用在应用程�
 |使用率|[低](https://w3techs.com/technologies/details/js-lodash/all/all)|
 
 |Underscore||
-|:----:|:---:|
+|----|----|
 |类型|库|
 |网站|[underscorejs.org/](http://underscorejs.org/)|
 |代码库|[github.com/jashkenas/underscore](https://github.com/jashkenas/underscore)|
@@ -148,7 +148,7 @@ React 的使用率统计数据较低可能是因为它主要被用在应用程�
 
 ### AngularJS 1.x
 |AngularJS||
-|:----:|:---:|
+|----|----|
 |类型|框架|
 |网站|[angularjs.org](https://angularjs.org/)|
 |代码库|[github.com/angular/angular.js](https://github.com/angular/angular.js)|
@@ -176,7 +176,7 @@ Angular 1.x仍然在持续开发中，但它也同时发布了 Angular 2（现�
 
 ### Angular 2.x（现在是4.x）
 |Angular||
-|:----:|:---:|
+|----|----|
 |类型|框架|
 |网站|[angular.io](https://angular.io/)|
 |代码库|[github.com/angular/angular.js](https://github.com/angular/angular.js)|
@@ -205,7 +205,7 @@ Angurlar 2 及其后续版本与其1.x版本是完全不同的两个项目，它
 
 ### Vue.js
 |Vue.js||
-|:----:|:---:|
+|----|----|
 |类型|框架|
 |网站|[vuejs.org](https://vuejs.org/)|
 |代码库|[github.com/vuejs/vue](https://github.com/vuejs/vue)|
@@ -232,7 +232,7 @@ Vue.js 使用 HTML 模板语法来绑定 DOM 和数据。其模型则是普通�
 
 ### Backbone.js
 |Backbone.js||
-|:----:|:---:|
+|----|----|
 |类型|框架|
 |网站|[backbonejs.org](http://backbonejs.org/)|
 |代码库|[github.com/jashkenas/backbone/](https://github.com/jashkenas/backbone/)|
@@ -260,7 +260,7 @@ Backbone.js 宣称自己是一个库，理由是它可以与其它项目整合�
 
 ### Ember.js
 |Ember.js||
-|:----:|:---:|
+|----|----|
 |类型|框架|
 |网站|[emberjs.com](https://emberjs.com/)|
 |代码库|[github.com/emberjs/ember.js](https://github.com/emberjs/ember.js)|
@@ -286,7 +286,7 @@ Ember.js 是基于模型—视图—视图模型（MVVM）模式的大型框架�
 
 ### Knockout.js
 |Knockout.js||
-|:----:|:---:|
+|----|----|
 |类型|框架|
 |网站|[knockoutjs.com](http://knockoutjs.com/)|
 |代码库|[github.com/knockout/knockout](https://github.com/knockout/knockout)|
@@ -321,7 +321,7 @@ Knockout.js 是较老的 MVVM 框架之一。它使用观察者模式来保证�
 构建工具可以自动运行 web 开发过程中各种不同的任务，例如预处理、编译、图片优化、代码压缩、代码检查以及运行测试。这些任务可以统一由一个单独的可执行包来管理。最受人欢迎的选项包括：
 ### Gulp.js
 |Gulp.js||
-|:----:|:---:|
+|----|----|
 |网站|[gulpjs.com](http://gulpjs.com/)|
 |代码库|[github.com/gulpjs/gulp](https://github.com/gulpjs/gulp)|
 |当前版本|3.9.1|
@@ -330,7 +330,7 @@ Knockout.js 是较老的 MVVM 框架之一。它使用观察者模式来保证�
 Gulp 尽管并非第一个任务执行工具，但它迅速成为了最受欢迎的选择并且[我个人也非常喜欢它](https://www.sitepoint.com/introduction-gulp-js/?aref=cbuckler)。Gulp 通过非常易读的 JavaScript 代码将源文件加载到流中，并将其通过管道在不同插件之间流转，然后输出。它很简单、快速而且有趣 —— 建议你在选择其它选项之前一定要试一试 Gulp.js。
 ### npm
 |npm||
-|:----:|:---:|
+|----|----|
 |网站|[npmjs.com](https://www.npmjs.com/)|
 |代码库|[github.com/npm/npm](https://github.com/npm/npm)|
 |当前版本|4.5.0|
@@ -339,7 +339,7 @@ Gulp 尽管并非第一个任务执行工具，但它迅速成为了最受欢迎
 npm 是 Node.js 的包管理器，但它在脚本方面的能力可以被用于[任务执行](https://www.sitepoint.com/guide-to-npm-as-a-build-tool/?aref=cbuckler)。npm 脚本对于依赖较少的简单项目非常有吸引力，但当面对复杂任务时它很快就会变成了一个不可行的选择了。
 ### Grunt
 |Grunt||
-|:----:|:---:|
+|----|----|
 |网站|[gruntjs.com](https://gruntjs.com/)|
 |代码库|[github.com/gruntjs/grunt](https://github.com/gruntjs/grunt)|
 |当前版本|1.0.1|
@@ -350,7 +350,7 @@ Grunt 是最早被大范围使用的 JavaScript 任务执行器之一，但是�
 近年来管理大量 JavaScript 文件已经迅速成了每个项目中的例行任务。默认情况下，在浏览器中文件不会被编译，因此必须按照一定的顺序加载或者连接合并所有的依赖文件。对此现在有像 [ES6 模块](https://www.sitepoint.com/understanding-es6-modules/?aref=cbuckler)和 [CommonJS](http://wiki.commonjs.org/wiki/Modules) 这样的解决方案，但浏览器对它们的支持并不好，所以一个模块打包工具就变得必不可少。
 ### Webpack
 |Webpack||
-|:----:|:---:|
+|----|----|
 |网站|[webpack.js.org](https://webpack.js.org/)|
 |代码库|[github.com/webpack/webpack](https://github.com/webpack/webpack)|
 |当前版本|2.5.1|
@@ -359,7 +359,7 @@ Grunt 是最早被大范围使用的 JavaScript 任务执行器之一，但是�
 Webpack 支持所有流行的模块形式，已经变成了 React 开发过程的标配。Webpack 虽然宣称自己是一个模块打包工具，但它也可以被用作一般的任务执行工具。
 ### Browserify
 |Browserify||
-|:----:|:---:|
+|----|----|
 |网站|[browserify.org](http://browserify.org/)|
 |代码库|[github.com/substack/node-browserify](https://github.com/substack/node-browserify)|
 |当前版本|14.3.0|
@@ -368,7 +368,7 @@ Webpack 支持所有流行的模块形式，已经变成了 React 开发过程�
 Browserify 支持 Node.js 所使用的 CommonJS 模块，它把所有模块编译成一个单独的可在浏览器中执行的文件。
 ### RequireJS
 |RequireJS||
-|:----:|:---:|
+|----|----|
 |网站|[requirejs.org](http://requirejs.org/)|
 |代码库|[github.com/jrburke/r.js](https://github.com/jrburke/r.js)|
 |当前版本|2.3.3|
@@ -379,7 +379,7 @@ RequireJS 是一个运行在浏览器中的模块加载工具，它也可以在 
 代码检查工具可以通过分析你的代码来发现潜在的错误和违反编码规范之处。有了它的帮助，你再也不会忘记关闭括号或者忘记在使用前声明变量了！
 ### ESLint
 |ESLint||
-|:----:|:---:|
+|----|----|
 |网站|[eslint.org](http://eslint.org/)|
 |代码库|[github.com/eslint/eslint](https://github.com/eslint/eslint)|
 |当前版本|3.19.0|
@@ -388,7 +388,7 @@ RequireJS 是一个运行在浏览器中的模块加载工具，它也可以在 
 ESLint 是一个可插拔式的代码检查工具，每条规则都是一个插件，因此你可以把它配置成你喜欢的样子。
 ### JSHint
 |JSHint||
-|:----:|:---:|
+|----|----|
 |网站|[jshint.com](http://jshint.com/)|
 |代码库|[github.com/jshint/jshint](https://github.com/jshint/jshint)|
 |当前版本|2.9.4|
@@ -397,7 +397,7 @@ ESLint 是一个可插拔式的代码检查工具，每条规则都是一个插�
 JSHint 是一个灵活的JavaScript 代码检查工具，它在真正的代码错误和迂腐的句法要求之间做到了一个很好的平衡。它也是我个人的最爱。
 ### JSLint
 |JSLint||
-|:----:|:---:|
+|----|----|
 |网站|[jslint.com](http://jslint.com/)|
 |代码库|[github.com/reid/node-jslint](https://github.com/reid/node-jslint)|
 |当前版本|0.10.3|
@@ -410,7 +410,7 @@ JSHint 是一个灵活的JavaScript 代码检查工具，它在真正的代码�
 这方面的选择有很多包括 [Ava](https://ava.li/)、[Tape](https://github.com/substack/tape) 和 [Jest](http://facebook.github.io/jest/)。但最受欢迎选项有：
 ### Mocha
 |Mocha||
-|:----:|:---:|
+|----|----|
 |网站|[mochajs.org](https://mochajs.org/)|
 |代码库|[github.com/mochajs/mocha](https://github.com/mochajs/mocha)|
 |当前版本|3.3.0|
@@ -419,7 +419,7 @@ JSHint 是一个灵活的JavaScript 代码检查工具，它在真正的代码�
 Mocha 是一个 JavaScript 测试框架，可以在 Node.js 或浏览器环境中运行测试。它支持异步测试，还经常与 [Chai](http://chaijs.com/) 一起使用来写出更为易读的测试代码。
 ### Jasmine
 |Jasmine||
-|:----:|:---:|
+|----|----|
 |网站|[jasmine.github.io](https://jasmine.github.io/)|
 |代码库|[github.com/jasmine/jasmine-npm](https://github.com/jasmine/jasmine-npm)|
 |当前版本|2.6.0|
@@ -428,7 +428,7 @@ Mocha 是一个 JavaScript 测试框架，可以在 Node.js 或浏览器环境�
 Jasmine 是一个行为驱动测试套件，它可以在浏览器中自动化测试你的用户界面与交互。
 ### QUnit
 |QUnit||
-|:----:|:---:|
+|----|----|
 |网站|[https://qunitjs.com/](https://qunitjs.com/)|
 |代码库|[github.com/kof/node-qunit](https://github.com/kof/node-qunit)|
 |当前版本|1.0.0|
