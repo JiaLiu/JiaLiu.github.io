@@ -52,3 +52,33 @@ Angular 2+ 虽然使用了 TypeScript， 但更多的是把 TS 的优势用于�
 
 ### 功能增强
 Angular 2+ 中大多数的功能增强都围绕其模板功能以 API 形式提供。虽然这些对于开发会大有帮助，但是也并非必需。使用像 TypeScript 这样的东西有一个优点是可以在开发代码过程中做到智能感知/自动补全以及错误检查。Angular 2+ 则通过语言服务扩展的方式为它的模板开发带来了这些功能，目前至少在 [Visual Studio Code](https://github.com/angular/vscode-ng-language-service) 中已经得到了应用。
+
+Angular 2+ 利用 [core-js](https://github.com/zloirock/core-js) 来进行 ES6 的 polyfill，借助 [RxJS](http://reactivex.io/rxjs/) 实现了一种非常类似于目前还处于建议状态的 ES Observables 语法以及基于此的其它更高级的功能。Angular 2+ 还引入了 zones 来为异步代码提供了一个统一的执行上下文。
+
+### 向前兼容性
+由于 Angular 2+ 是用 TypeScript 写的，这在一定程度上保证了它将来在句法上不会发生巨大的变化。同时，Angular 2+ 也依赖于一组标准 —— 通过 polyfill 保证与标准的一致性。这些都在很大程度上确保了你今天写的代码保持向前兼容。Angular 2+ 也确实重度依赖于它的框架 API，而这些 API 的长期兼容性则取决于 Angular 2+ 的路线图。对此，Angular 2+ 团队表示他们没有破坏未来兼容性的计划，不会再发生从 Angular 1 到 Angular 2 那样的事情了。
+
+Angular 2+ 支持 ES Modules 和组件式建构。通过代码分离，可以更加容易地进行代码重构和测试，而避免对整个代码库的影响。另一方面，因为 Angular 2+ 使用依赖注入，在开发时不依赖于具体的接口和类型。这可能会导致在升级应用程序时发生错误，并且这种错误难以在开发阶段发现。
+
+### i18n 与 i10n
+i18n API 是 Angular 2+ 整个框架的一部分。通过向模板增加一个 i18n 属性就可以实现，并且可以搭配一个可选的意图描述。Angular 2+ 的命令行工具会在编译阶段从模板中抽取出这些信息形成用于语言翻译的 bundle，然后你可以为不同的语言地域提供不同的翻译。Angular 2+ 没有为日期、货币、复数以及其他语言结构提供本地化 API。在使用 i18n 时需要选用 [SystemJS](https://github.com/systemjs/systemjs) 这样的加载器插件，它可以动态地加载那些翻译资源。这些翻译文件的产生依赖于编译过程，因此扩展它们将经常需要你重新编译你的程序。因而许多Angular 2+ 的用户已经转向其它更好的 i18n/i10n 第三方解决方案，例如 [Globalize](https://github.com/jquery/globalize/) 和 [i18next](https://www.i18next.com/)。
+
+## React + Redux
+![](https://www.sitepen.com/blog/wp-content/uploads/2017/06/react-logo.png)
+
+### 支持的环境
+确切地描述 React + Redux 所支持的浏览器环境是比较复杂的，因为它们二者都是库，可能被用来作为一个大型应用技术栈中的一部分，其中涉及的其它技术所支持的环境与 React + Redux 可能相同也可能不同。[ReactDOM](https://facebook.github.io/react/docs/react-dom.html) 在React 中负责实现核心的 DOM 交互，它支持 IE9 和其它浏览器，包括 Edge、Safari、Firefox、Chrome、iOS 和 Android 的当前版本。Redux 应该可以在支持 ES5+ 的任何浏览器中工作，所以它支持的环境与 ReactDOM 相同。
+
+同时，React 在服务器端渲染方面也非常成熟，尽管找不到一个确切的它与 Node.js 之间的支持菊展，但显然它可以支持 Node.js 0.10.0+。
+
+### 与现代标准保持一致
+React 和 Redux 都对现代标准持欢迎态度。它们一般都会假定开发者会用 ES6+ 来写代码，然后使用一个转译工具来把代码转化成需要的版本。传统上人们都会使用 [Babel](https://babeljs.io/) 作为转译工具，但 [TypeScript](https://typescriptlang.org/) 加上 [core-js](https://github.com/zloirock/core-js) 也可以提供类似的功能。对于如何在没有 [ES6](https://facebook.github.io/react/docs/react-without-es6.html) 的支持下使用 React，尽管有一些指导资料，但你会很快发现这已经越来越难了。
+
+React + Redux 也会经常推动未来的标准。Facebook 会在他们的代码中使用这些标准，然后就会在标准工作组里面支持它们。例如，React 中采用了[对象的 spread/rest 操作符](https://github.com/tc39/proposal-object-rest-spread)这一新语法，而类似功能目前还处于 [TC39 的标准化流程](https://www.sitepen.com/blog/2017/04/06/tc39-open-and-incremental-approach-improves-standards-process/)中。
+
+### 功能增强
+React 重度依赖 [JSX](https://facebook.github.io/react/docs/introducing-jsx.html)，这是一个可以把 XML 语法融入 JavaScript 的预处理器环节。尽管不使用 JSX 也可以使用 React，但这也会非常坤嫩，因为社区现在已经接受了 JSX，大多数的例子都是用 JSX 来写的。
+
+React 周边还存在着一批 Facebook 认为提供了重要功能或模式的库。例如 [Immutable.js](https://facebook.github.io/immutable-js/)（这个库提供了不可变对象，来帮助实现单向数据流模式） 和 [Flow](https://flow.org/)（为 JavaScript 提供静态类型支持，帮助实现编译阶段的类型检查）都提供了标准之外的功能。同时 React + Redux 还需要很多其它依赖的库，形成了一套它们所需要的稳定的 API 集合。
+
+React 在运行时还依赖于一些底层库，主要用于确保标准兼容性，以及一些底层的环境侦测。Redux 则使用 [Lodash](http://lodash.com/) 来提供一些非标准的高级功能。
