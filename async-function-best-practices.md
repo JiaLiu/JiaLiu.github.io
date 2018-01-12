@@ -2,11 +2,11 @@
 
 > 本文译自 [Node.js Async Function Best Practices](https://nemethgergely.com/async-function-best-practices/)，作者是 Gergely Nemeth。如果你对他感兴趣，可以关注他的 [Twitter](https://twitter.com/nthgergo)，以及[订阅](https://www.getrevue.co/profile/gergelyke)他的邮件列表。
 
-Node.js 从版本 7.6 开始，借助其包含的新版 V8 引擎，开始支持 async 函数特性。 而随着 [Node.js 8 在 10 月 31 日成为了新的长期支持版本](https://github.com/nodejs/Release)，你完全可以开始在你的代码中使用 async 函数了。在这边文章里，我会简要地介绍什么是 async 函数，以及它会如何改变我们编写 Node.js 应用的方式。
+借助于新版 V8 引擎，Node.js 从 7.6 开始支持 async 函数特性。今年 10 月 31 日，[Node.js 8 也开始成为新的长期支持版本](https://github.com/nodejs/Release)，因此你完全可以放心大胆地在你的代码中使用 async 函数了。在这边文章里，我会简要地介绍一下什么是 async 函数，以及它会如何改变我们编写 Node.js 应用的方式。
 
 ## 什么是 ```async``` 函数
 
-```async``` 函数让你可以把基于 ```Promise``` 的异步代码写得就像同步代码一样。一旦你使用 ```async``` 关键字来定义了一个函数，那你就可以在这个函数内使用 ```await``` 关键字。当一个 ```async``` 函数被调用时，它会返回一个 ```Promise```。当这个 ```async``` 函数返回一个值时，那个 ```Promise``` 就会实现；而如果函数中抛出一个错误，那么 ```Promise``` 就会被拒绝。
+利用 ```async``` 函数，你可以把基于 ```Promise``` 的异步代码写得就像同步代码一样。一旦你使用 ```async``` 关键字来定义了一个函数，那你就可以在这个函数内使用 ```await``` 关键字。当一个 ```async``` 函数被调用时，它会返回一个 ```Promise```。当这个 ```async``` 函数返回一个值时，那个 ```Promise``` 就会被实现；而如果函数中抛出一个错误，那么 ```Promise``` 就会被拒绝。
 
 ```await``` 关键字可以被用来等待一个 ```Promise``` 被解决并返回其实现的值。如果传给 ```await``` 的值不是一个 ```Promise```，那它会把这个值转化为一个已解决的 ```Promise```。
 
@@ -29,9 +29,9 @@ main()
 
 ## 向 ```async``` 函数迁移
 
-如果你的 Node.js 应用已经在使用```Promise```，那你只需要把原先的链式调用改为 ```await``` 你的这些 ```Promise```。
+如果你的 Node.js 应用已经在使用```Promise```，那你只需要把原先的链式调用改写为对你的这些 ```Promise``` 进行 ```await```。
 
-如果你的应用还在使用回调函数，那你应该逐步地转向使用 ```async``` 函数。你可以再开发一些新功能的时候使用这项新技术。如果你必须使用应用中的原有旧代码时，你可以简单地把它们包裹成为 Promise。
+如果你的应用还在使用回调函数，那你应该以渐进的方式转向使用 ```async``` 函数。你可以在开发一些新功能的时候使用这项新技术。当你必须调用一些旧有的代码时，你可以简单地把它们包裹成为 Promise 再用新的方式调用。
 
 要做到这一点，你可以使用内建的 ```util.promisify```方法：
 
@@ -103,7 +103,7 @@ async function main () {
 
 * 你的代码会首先去获取 ```user```，
 * 然后获取 ```product```，
-* 最后再进行支付
+* 最后再进行支付。
 
 如你所见，由于前两步之间并没有相互依赖关系，其实你完全可以将它们并行执行。这里，你应该使用 ```Promise.all``` 方法：
 
@@ -117,7 +117,7 @@ async function main () {
 }
 ```
 
-而有时候，你只需要其中最快被解决的 Promise 的返回值——这时，你可以使用 ```Promise. race``` 方法。
+而有时候，你只需要其中最快被解决的 Promise 的返回值——这时，你可以使用 ```Promise.race``` 方法。
 
 ### 错误处理
 
@@ -140,7 +140,7 @@ main()
 (node:69738) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
 ```
 
-在较新的 Node.js 版本中，如果 Promise 被拒绝且未得到处理，就会中断整个 Node.js 进程。因此必要的时候你应该使用 ```try-catch```：
+在较新的 Node.js 版本中，如果 Promise 被拒绝且未得到处理，整个 Node.js 进程就会被中断。因此必要的时候你应该使用 ```try-catch```：
 
 ```javascript
 const util = require('util')
