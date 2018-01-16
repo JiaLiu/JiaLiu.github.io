@@ -56,3 +56,32 @@ document.getElementById("close").addEventListener("click", () => {
 目前，Chrome 已经支持了&lt;dialog&gt; 元素，而在 Firefox 中可以通过配置打开这一特性。具体情况可以查看 <https://caniuse.com/#feat=dialog>。
 
 ### 在 iframe 里使用支付请求 API
+
+[支付请求 API](https://www.w3.org/TR/payment-request/) 是由浏览器原生的用于支付的解决方案，旨在为用户在 web 上进行支付提供一个标准的一致的方法。它让浏览器提供统一一致的界面来搜集用户的支付信息，而不是让用户填写各个网站自己的支付表单。
+
+在 HTML 5.2 之前，支付请求 API 不能在 iframe 中 使用。这使得那些第三方提供的嵌入式支付解决方案（例如 Stripe、Paystack）完全无法利用这个 API，因为它们的支付接口都是需要在一个 iframe 中进行处理的。
+
+HTML 5.2 为 iframe 引入了一个 **allowpaymentrequest** 属性，设置这个属性就可以允许在一个 iframe 中使用支付请求 API 了。
+
+```html
+<iframe allowpaymentrequest>
+```
+
+### 为苹果设备定义不同尺寸的图标
+
+通过在 HTML 文档的头部使用 **&lt;link rel="icon"&gt;**，我们可以定义网页的图标。同时，还可以使用 **sizes** 属性来定义多个不同尺寸的图标。
+
+```html
+<link rel="icon" sizes="16x16" href="path/to/icon16.png">  
+<link rel="icon" sizes="32x32" href="path/to/icon32.png">
+```
+
+虽然这个属性纯粹是建议性的，但它允许浏览器来决定使用哪个图标。尤其是像现在大多数设备的最优图标尺寸都不一样，只有浏览器自己才能更好地选择合适的图标尺寸。
+
+在 HTML 5.2 以前，**sizes** 属性仅仅当 link 标签的 rel 属性为 icon 时才视为有效。可是，苹果的 iOS 设备并不支持 **sizes** 属性。它引入了一个私有的 rel 值 **apple-touch-icon**，用于定义网页在苹果设备上的图标。
+
+在 HTML 5.2 中，规范的这一限制被去除，当 rel 为 icon 或 apple-touch-icon 时都可以使用 sizes 属性。
+
+## 新的被认为有效的情况
+
+除了
