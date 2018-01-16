@@ -8,13 +8,13 @@
 
 ## 新特性
 
-### 原生的 <dialog> 元素
+### 原生的 &lt;dialog&gt; 元素
 
-在 HTML 5.2 的所有变化里我感到最为激动的就是引入了 [<dialog> 元素](https://www.w3.org/TR/html52/interactive-elements.html#elementdef-dialog)，实现了浏览器原生的对话框。毫无疑问，对话框在 web 开发中非常常见，但是现在每个实现都不太一样。另一方面，对话框也很难做到无障碍化，实际上，现在 web 上使用的大多数对话框对于视觉障碍人士来说都是难以使用的。
+在 HTML 5.2 的所有变化里我感到最为激动的就是引入了 [&lt;dialog&gt; 元素](https://www.w3.org/TR/html52/interactive-elements.html#elementdef-dialog)，实现了浏览器原生的对话框。毫无疑问，对话框在 web 开发中非常常见，但是现在每个实现都不太一样。另一方面，对话框也很难做到无障碍化，实际上，现在 web 上使用的大多数对话框对于视觉障碍人士来说都是难以使用的。
 
-新引入的 <dialog> 元素的目标就是要改变这一现状，通过一种简单的方式我们就可以实现一个标准的模态对话框，同时无须担心会有其它方面的隐患。我会专门写一篇详细的文章介绍如何使用这个新元素，在这里我先做一个简单的说明。
+新引入的 &lt;dialog&gt; 元素的目标就是要改变这一现状，通过一种简单的方式我们就可以实现一个标准的模态对话框，同时无须担心会有其它方面的隐患。我会专门写一篇详细的文章介绍如何使用这个新元素，在这里我先做一个简单的说明。
 
-首先，使用 <dialog> 元素可以创建一个对话框：
+首先，使用 &lt;dialog&gt; 元素可以创建一个对话框：
 
 ```html
 <dialog>  
@@ -53,6 +53,6 @@ document.getElementById("close").addEventListener("click", () => {
 </script>  
 ```
 
-目前，Chrome 已经支持了<dialog> 元素，而在 Firefox 中可以通过配置打开这一特性。具体情况，可以查看 <https://caniuse.com/#feat=dialog>。
+目前，Chrome 已经支持了&lt;dialog&gt; 元素，而在 Firefox 中可以通过配置打开这一特性。具体情况可以查看 <https://caniuse.com/#feat=dialog>。
 
 ### 在 iframe 里使用支付请求 API
