@@ -53,6 +53,6 @@ document.getElementById("close").addEventListener("click", () => {
 </script>  
 ```
 
-目前，Chrome 已经支持了<dialog> 元素，而在 Firefox 中可以通过配置打开这一特性。
+目前，Chrome 已经支持了<dialog> 元素，而在 Firefox 中可以通过配置打开这一特性。具体情况，可以查看 <https://caniuse.com/#feat=dialog>。
 
 ### 在 iframe 里使用支付请求 API
